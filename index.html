@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="web2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    
+    <title>Document</title>
+    <style>
+            html,
+            body {
+            position: relative;
+            height: 100%;
+            }
+    
+            body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            }
+    
+            .swiper {
+            width: 100%;
+            height: 100%;
+            }
+    
+            .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+    
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            }
+    
+            .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
+            .swiper-button-next,.swiper-button-prev {
+                width: 50px;
+                height: 50px;
+                color: orange;
+                border: 13px;
+                border-radius: 13px;
+                background: linear-gradient(to right, #8d4fff, #fa9e1b);
+            }
+            .swiper.mySwiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden {
+                border-radius: 16px;
+            }
+            .swiper-backface-hidden .swiper-slide {
+                transform: translateZ(0);
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                display: block;
+                text-align: center;
+            }
+            @media screen and (max-width:900px){
+                    .swiper-button-next, .swiper-button-prev {
+                    width: 35px;
+                    height: 35px;
+                }
+                .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+                    content: 'next';
+                    font-size: 21px;
+                }
+                .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+                    content: 'prev';
+                    font-size: 21px;
+                }
+            }
+            @media screen and (max-width:415px){
+                .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+                    content: 'next';
+                    font-size: 13px;
+                }
+                .swiper-button-next, .swiper-button-prev {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+      </style>
+</head>
+<body>
+    <header>
+        <div class="contain">
+            <div class="navbar_small1">
+                <div class="navbar_small">
+                    <div class="icon_navbar">
+                        <div class="sdt">+45 345 3324 56789</div>
+                        <div class="icon_1">
+                            <a href="#"><i class="fa fa-behance"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                    <div class="register">
+                        <a class="login_navbar" href="#">LOGIN</a>
+                        <a href="#">REGISTER</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="img/logo.jpg" alt="" class="logo1">
+                    <span class="logo2">TRAVELIX</span>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="">home
+                            <ul class="menu1">
+                                <li><a href="">about us</a></li>
+                                <li><a href="">offers</a></li>
+                                <li><a href="">news</a></li>
+                                <li><a href="">contack</a></li>
+                            </ul>
+                        </a></li>
+                        <li><a href="">about us</a>
+                            <ul class="menu1">
+                                <li><a href="">about us</a></li>
+                                <li><a href="">offers</a></li>
+                                <li><a href="">news</a></li>
+                                <li><a href="">contack</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">offers</a>
+                            <ul class="menu1">
+                                <li><a href="">about us</a></li>
+                                <li><a href="">offers</a></li>
+                                <li><a href="">news</a></li>
+                                <li><a href="">contack</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">news</a>
+                            <ul class="menu1">
+                                <li><a href="">about us</a></li>
+                                <li><a href="">offers</a></li>
+                                <li><a href="">news</a></li>
+                                <li><a href="">contack</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">contack</a>
+                            <ul class="menu1">
+                                <li><a href="">about us</a></li>
+                                <li><a href="">offers</a></li>
+                                <li><a href="">news</a></li>
+                                <li><a href="">contack</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <div class="nav">
+                    <input type="checkbox" class='nav__input' name="" id="nav__input">
+                    <nav class="nav__pc">
+                      <ul class="nav__list">
+                        <li><a href="" class="nav__link">Home</a></li>
+                        <li><a href="" class="nav__link">About</a></li>
+                        <li><a href="" class="nav__link">Category</a></li>
+                        <li><a href="" class="nav__link">News</a></li>
+                        <li><a href="" class="nav__link">Contact</a></li>
+                      </ul>
+                    </nav>
+                    <label for="nav__input" class="nav__bar-btn">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                    </label>
+                    <label for="nav__input" class="nav__overlay">
+                    </label>
+                    <nav  class="nav__mobile">
+                      <ul class="nav__mobile-list">
+                        <li><a href="" class="nav__mobile-link">Home</a></li>
+                        <li><a href="" class="nav__mobile-link">About</a></li>
+                        <li><a href="" class="nav__mobile-link">Category</a></li>
+                        <li><a href="" class="nav__mobile-link">News</a></li>
+                        <li><a href="" class="nav__mobile-link">Contact</a></li>
+                      </ul>
+                      <label for="nav__input" class="nav__mobile-btn">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                      </label>
+                    </nav>
+                  </div> -->
+
+
+
+                <div class="icon">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+            <div class="content">
+                <h1>discover</h1>
+                <h1>the world</h1>
+                <button>explore now</button>
+            </div>
+            <div class="button">
+                <div class="_1icon">
+                    <img src="img/icon1-web.jpg" alt="">
+                    <span>HOTELS</span>
+                </div>
+                <div class="_1icon">
+                    <img src="img/icon2-web.jpg" alt="">
+                    <span>CAR RENTALS</span>
+                </div>
+                <div class="_1icon">
+                    <img src="img/icon3-web.jpg" alt="">
+                    <span>FLIGHTS</span>
+                </div>
+                <div class="_1icon">
+                    <img src="img/icon4-web.jpg" alt="">
+                    <span>TRIPS</span>
+                </div>
+                <div class="_1icon">
+                    <img src="img/icon5-web.jpg" alt="">
+                    <span>CRUISES</span>
+                </div>
+                <div class="_1icon">
+                    <img src="img/icon6-web.jpg" alt="">
+                    <span>ACTIVITIES</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="box1">
+                    <div>DESTIONATION</div>
+                    <input class="text1" type="text" placeholder="">
+                </div>
+                <div class="box2">
+                    <div>CHECK IN</div>
+                    <input class="text2" type="text" placeholder="YYYY-MM-DD">
+                </div>
+                <div class="box3_1">
+                    <div>CHECK OUT</div>
+                    <input class="text3" type="text" placeholder="YYYY-MM-DD">
+                </div>
+                <div class="box4_1">
+                    <div>ADULTS</div>
+                    <input class="text4" type="text" placeholder="">
+                </div>
+                <!-- <div class="box5">
+                    <div>CHILDREN</div>
+                    <input class="text5" type="text" placeholder="">
+                </div> -->
+                <botton class="search">SEARCH</botton>
+            </div>
+        </div>
+        <div class="container2 s1">
+            <div class="chu">
+                <h2 class="chu1">We have the best tours</h2>
+                <div class="chu2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</div>
+            </div>
+            <div class="box">
+                <div class="_1box">
+                    <div class="anh1"><img src="img/box1-web.jpg" alt=""></div>
+                    <div class="date">May 25th - June 01st</div>
+                    <div class="star1">
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                    </div>
+                    <h1 class="name">Mauritius</h1>
+                    <div class="price">From $1450</div>
+                    <div class="seemore">SEE MORE</div>
+                </div>
+                <div class="_1box">
+                    <div class="anh1"><img src="img/box2-web.jpg" alt=""></div>
+                    
+                    <div class="date">May 25th - June 01st</div>
+                    <div class="star1">
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                    </div>
+                    <h1 class="name2">Greece</h1>
+                    <div class="price">From $1450</div>
+                    <div class="seemore">SEE MORE</div>
+                </div>
+                <div class="_1box">
+                    <div class="anh1"><img src="img/box3-web.jpg" alt=""></div>
+                    <div class="date">May 25th - June 01st</div>
+                    <div class="star1">
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                        <div><i class="fa fa-star"></i></div>
+                    </div>
+                    <h1 class="name">Scotland</h1>
+                    <div class="price">From $1450</div>
+                    <div class="seemore">SEE MORE</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container3">
+            <div class="img1"></div>
+            <div class="slide s2">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="namebox">maldives deluxe package</div>
+                            <div class="star2">
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                            </div>
+                            <p class="contentbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
+                            <div class="buttonbox">book now</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="namebox">maldives deluxe package</div>
+                            <div class="star2">
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                            </div>
+                            <p class="contentbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
+                            <div class="buttonbox">book now</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="namebox">maldives deluxe package</div>
+                            <div class="star2">
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                            </div>
+                            <p class="contentbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
+                            <div class="buttonbox">book now</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="namebox">maldives deluxe package</div>
+                            <div class="star2">
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                                <div><i class="fa fa-star"></i></div>
+                            </div>
+                            <p class="contentbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec. Proin bibendum, augue faucibus tincidunt ultrices, tortor augue gravida lectus, et efficitur enim justo vel ligula.</p>
+                            <div class="buttonbox">book now</div>
+                        </div>
+                
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+            </div>
+        </div>
+        <div class="container4">
+ 
+            <div data-aos="zoom-in">
+                <div data-aos="zoom-in">
+                    <div class="title">the best offers with rooms</div>
+                <div class="box2">
+                    <div class="_2box">
+                        <div class="product">
+                            <div class="anhkhung">
+                                <div class="anh"><img src="img/product1.jpg" alt=""></div>
+                                <div class="grand">GRAND CASTLE</div>
+                            </div>
+                            <div class="chupr">
+                                <span>$70</span>
+                                <span>per night</span>
+                                <div class="nd1">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</div>
+                                <div class="star">
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                </div>
+                                <div class="icon2">
+                                    <div class="_icon2"><img src="img/icon2.1.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.2.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.3.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.4.jpg" alt=""></div>
+                                    
+                                </div>
+                                <div class="readmore">read more</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_2box">
+                        <div class="product">
+                            <div class="anhkhung">
+                                <div class="anh"><img src="img/product2.jpg" alt=""></div>
+                                <div class="grand">GRAND CASTLE</div>
+                            </div>                        <div class="chupr">
+                                <span>$70</span>
+                                <span>per night</span>
+                                <div class="nd1">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</div>
+                                <div class="star">
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                </div>
+                                <div class="icon2">
+                                    <div class="_icon2"><img src="img/icon2.1.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.2.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.3.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.4.jpg" alt=""></div>
+                                    
+                                </div>
+                                <div class="readmore">read more</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_2box">
+                        <div class="product">
+                            <div class="anhkhung">
+                                <div class="anh"><img src="img/product3.jpg" alt=""></div>
+                                <div class="grand">GRAND CASTLE</div>
+                            </div>                        
+                            <div class="chupr">
+                                <span>$70</span>
+                                <span>per night</span>
+                                <div class="nd1">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</div>
+                                <div class="star">
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                </div>
+                                <div class="icon2">
+                                    <div class="_icon2"><img src="img/icon2.1.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.2.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.3.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.4.jpg" alt=""></div>
+                                
+                            </div>
+                                <div class="readmore">read more</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="_2box">
+                        <div class="product">
+                            <div class="anhkhung">
+                                <div class="anh"><img src="img/product4.jpg" alt=""></div>
+                                <div class="grand">GRAND CASTLE</div>
+                            </div>                        
+                            <div class="chupr">
+                                <span>$70</span>
+                                <span>per night</span>
+                                <div class="nd1">Suspendisse potenti. In faucibus massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.</div>
+                                <div class="star">
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                    <div><i class="fa fa-star"></i></div>
+                                </div>
+                                <div class="icon2">
+                                    <div class="_icon2"><img src="img/icon2.1.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.2.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.3.jpg" alt=""></div>
+                                    <div class="_icon2"><img src="img/icon2.4.jpg" alt=""></div>                                
+                                </div>
+                                <div class="readmore">read more</div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="contaner5">
+                <div data-aos="zoom-in">
+                    <div class="title2">WHAT OUR CLIENTS SAY ABOUT US</div>
+                <div class="box3">
+                    <div class="_3box">
+                        <div class="img5"><img src="img/box3-web2.jpg" alt=""></div>
+                        <div class="namett">
+                            <div class="namesmith">carla smith</div>
+                            <div class="date1">May 24,2007</div>
+                        </div>
+                        <div class="nd3">
+                            <div class="nd3_1">" Best holliday ever "</div>
+                            <div class="nd3_2">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</div>
+                        </div>
+                    </div>
+                    <div class="_3box">
+                        <div class="img5"><img src="img/box3.2-wed2.jpg" alt=""></div>
+                        <div class="namett">
+                            <div class="namesmith">carla smith</div>
+                            <div class="date1">May 24,2007</div>
+                        </div>
+                        <div class="nd3">
+                            <div class="nd3_1">" Best holliday ever "</div>
+                            <div class="nd3_2">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</div>
+                        </div>
+                    </div>
+                    <div class="_3box">
+                        <div class="img5"><img src="img/box3.1-web2.jpg" alt=""></div>
+                        <div class="namett">
+                            <div class="namesmith">carla smith</div>
+                            <div class="date1">May 24,2007</div>
+                        </div>
+                        <div class="nd3">
+                            <div class="nd3_1">" Best holliday ever "</div>
+                            <div class="nd3_2">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</div>
+                        </div>
+                    </div>
+                    <div class="_3box">
+                        <div class="img5"><img src="img/box3.2-wed2.jpg" alt=""></div>
+                        <div class="namett">
+                            <div class="namesmith">carla smith</div>
+                            <div class="date1">May 24,2007</div>
+                        </div>
+                        <div class="nd3">
+                            <div class="nd3_1">" Best holliday ever "</div>
+                            <div class="nd3_2">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</div>
+                        </div>
+                    </div>
+                    <div class="_3box">
+                        <div class="img5"><img src="img/box3.1-web2.jpg" alt=""></div>
+                        <div class="namett">
+                            <div class="namesmith">carla smith</div>
+                            <div class="date1">May 24,2007</div>
+                        </div>
+                        <div class="nd3">
+                            <div class="nd3_1">" Best holliday ever "</div>
+                            <div class="nd3_2">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</div>
+                        </div>
+                    </div>
+                    <div class="_3box">
+                        <div class="img5"><img src="img/box3-web2.jpg" alt=""></div>
+                        <div class="namett">
+                            <div class="namesmith">carla smith</div>
+                            <div class="date1">May 24,2007</div>
+                        </div>
+                        <div class="nd3">
+                            <div class="nd3_1">" Best holliday ever "</div>
+                            <div class="nd3_2">Nullam eu convallis tortor. Suspendisse potenti. In faucibus massa arcu, vitae cursus mi hendrerit nec.</div>
+                        </div>
+                    </div>                                          
+                </div>
+            </div>
+                </div>
+                
+        </div>
+        <div class="container6">
+            <div data-aos="flip-right">
+                <div class="titlter3">TRENDING NOW</div>
+            <div class="box4_2">
+                <div class="_4box">
+                    <div class="img6"><img src="img/box4.1-web.jpg" alt=""></div>
+                    <div class="grand1">
+                        <div class="chu_1">GRAND HOTEL</div>
+                        <div class="chu_2">From $182</div>
+                        <div class="chu_3">MADRID, SPAIN</div>
+                    </div>
+                </div>
+                <div class="_4box">
+                    <div class="img6"><img src="img/box4.2-web.jpg" alt=""></div>
+                    <div class="grand1">
+                        <div class="chu_1">GRAND HOTEL</div>
+                        <div class="chu_2">From $182</div>
+                        <div class="chu_3">MADRID, SPAIN</div>
+                    </div>
+                </div>
+                <div class="_4box">
+                    <div class="img6"><img src="img/box4.3-web.jpg" alt=""></div>
+                    <div class="grand1">
+                        <div class="chu_1">GRAND HOTEL</div>
+                        <div class="chu_2">From $182</div>
+                        <div class="chu_3">MADRID, SPAIN</div>
+                    </div>
+                </div>
+                <div class="_4box">
+                    <div class="img6"><img src="img/box4.4-web.jpg" alt=""></div>
+                    <div class="grand1">
+                        <div class="chu_1">GRAND HOTEL</div>
+                        <div class="chu_2">From $182</div>
+                        <div class="chu_3">MADRID, SPAIN</div>
+                    </div>
+                </div>
+                <div class="_4box">
+                    <div class="img6"><img src="img/box4.5-web.jpg" alt=""></div>
+                    <div class="grand1">
+                        <div class="chu_1">GRAND HOTEL</div>
+                        <div class="chu_2">From $182</div>
+                        <div class="chu_3">MADRID, SPAIN</div>
+                    </div>
+                </div>
+                <div class="_4box">
+                    <div class="img6"><img src="img/box4.6-web.jpg" alt=""></div>
+                    <div class="grand1">
+                        <div class="">GRAND HOTEL</div>
+                        <div class="chu_2">From $182</div>
+                        <div class="chu_3">MADRID, SPAIN</div>
+                    </div>
+                </div>
+                <div class="_4box">
+                    <div class="img6"><img src="img/box4.7-web.jpg" alt=""></div>
+                    <div class="grand1">
+                        <div class="chu_1">GRAND HOTEL</div>
+                        <div class="chu_2">From $182</div>
+                        <div class="chu_3">MADRID, SPAIN</div>
+                    </div>
+                </div>
+                <div class="_4box">
+                    <div class="img6"><img src="img/box4.8-web.jpg" alt=""></div>
+                    <div class="grand1">
+                        <div class="chu_1">GRAND HOTEL</div>
+                        <div class="chu_2">From $182</div>
+                        <div class="chu_3">MADRID, SPAIN</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+        <div class="contaienr7">
+            <div class="login">
+                <div class="getin">GET IN TOUCH</div>
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Subject"><br>
+                    <input type="text" placeholder="Message">                           
+                </form>
+                <div class="seenmesenage">seen message</div>
+            </div>
+     
+        </div>
+        
+    </main>
+    <footer>
+        <div class="container8">
+            <div class="intro">
+                <div class="box_footer">
+                    <div class="logo_footer">
+                        <img src="img/logo.jpg" alt="" class="logo1">
+                        <span class="logo2_footer">TRAVELIX</span>
+                    </div>
+                    <div class="nd_footer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula pretium.</div>
+                    <div class="icon_footer">
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="box_footer">
+                    <div class="blog">BLOG POSTS</div>
+                    <div class="blog_footer">
+                        <div class="img_footer"><img src="img/footer1_web.jpg" alt=""></div>
+                        <div class="nd1_footer">
+                            <div class="travel">Travel with us this year</div>
+                            <div class="date_footer">Nov 29, 2017</div>
+                        </div>
+                    </div>
+                    <div class="blog_footer">
+                        <div class="img_footer"><img src="img/footer2_web.jpg" alt=""></div>
+                        <div class="nd1_footer">
+                            <div class="travel">Travel with us this year</div>
+                            <div class="date_footer">Nov 29, 2017</div>
+                        </div>
+                    </div>
+                    <div class="blog_footer">
+                        <div class="img_footer"><img src="img/footer3_web.jpg" alt=""></div>
+                        <div class="nd1_footer">
+                            <div class="travel">Travel with us this year</div>
+                            <div class="date_footer">Nov 29, 2017</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="box_footer">
+                    <div class="tag">TAGS</div>
+                    <div class="button_footer">
+                        <button class="_1button_footer">design</button>
+                        <button class="_1button_footer">fashion</button>
+                        <button class="_1button_footer">music</button>
+                        <button class="_1button_footer">video</button>
+                        <button class="_1button_footer">party</button>
+                        <button class="_1button_footer">photography</button>
+                        <button class="_1button_footer">adventure</button>
+                        <button class="_1button_footer">travel</button>
+
+                    </div>
+                </div>
+                <div class="box_footer">
+                    <div class="contact">CONTACTN INFO</div>
+                    <div class="contact_box">
+                        <div class="img_contact"><img src="img/img_contact1.svg" alt=""></div>
+                        <div class="chu_contact">4127 Raoul Wallenber 45b-c Gibraltar</div>
+                    </div>
+                    <div class="contact_box">
+                        <div class="img_contact"><img src="img/phone-call.svg" alt=""></div>
+                        <div class="chu_contact">2556-808-8613</div>
+                    </div>
+                    <div class="contact_box">
+                        <div class="img_contact"><img src="img/message.svg" alt=""></div>
+                        <div class="chu_contact"> contactme@gmail.com</div>
+                    </div>
+                    <div class="contact_box">
+                        <div class="img_contact"><img src="img/planet-earth.svg" alt=""></div>
+                        <div class="chu_contact">www.colorlib.com</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container9">
+           <div class="footer2">
+                <div class="copyright">Copyright ©2022 All rights reserved | This template is made with  by Colorlib</div>
+                <div class="menu_footer">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">offers</a></li>
+                        <li><a href="#">new</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="web2.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
